@@ -1,0 +1,327 @@
+@import './var.scss';
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+div,
+fieldset,
+legend,
+input,
+textarea,
+button,
+select {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    outline: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.3px;
+    font-family: Arial;
+}
+
+:root {
+    font-size: 10px !important;
+}
+
+html {
+    font-size: 14px !important;
+    font-family: 'Microsoft Yahei', Arial, sans-serif;
+}
+
+body {
+    color: rgba($ttt, 1);
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+a {
+    color: rgba($ttt, 1);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba($primay, 1);
+}
+
+em {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    .left {
+        text-align: left;
+    }
+}
+
+p {
+    word-wrap: break-word;
+}
+
+.clearfix {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.main {
+    width: 84%;
+    margin: auto;
+}
+
+.mains {
+    width: 68%;
+    margin: auto;
+}
+
+/*为了保证顶部不被遮挡 导航的高度为70的类名*/
+.pt70 {
+    padding-top: 70px;
+}
+
+.pt30 {
+    padding-top: 30px;
+}
+
+/*弹性盒子*/
+.flex {
+    display: flex;
+}
+
+/*消息弹窗在最上面显示*/
+.message-override,
+.el-message {
+    z-index: 9999999999999999 !important;
+}
+
+/*placeholder的颜色*/
+input::placeholder {
+    color: $ccc;
+}
+
+/*input左边空两格*/
+input {
+    padding-left: 4px;
+}
+
+/*复选框的颜色*/
+input[type='checkbox'] {
+    cursor: pointer;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
+}
+
+input[type='checkbox']::after {
+    position: absolute;
+    top: 0;
+    color: $jjj;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    visibility: visible;
+    padding-left: 0px;
+    text-align: center;
+    content: ' ';
+    border-radius: 3px;
+}
+
+input[type='checkbox']:checked::after {
+    content: '✓';
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    background: rgba($success, 1);
+}
+
+button {
+    border: none;
+    transition: 0.3s;
+}
+
+/*transition要求的类名 四个方向逐步出现*/
+/* top */
+.fade-top-enter-from,
+.fade-top-leave-to {
+    transform: translate3d(0, -15%, 0);
+    opacity: 0;
+}
+.fade-top-leave-from,
+.fade-top-enter-to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+.fade-top-enter-active,
+.fade-top-leave-active {
+    transition: all 1s;
+}
+
+/* right */
+.fade-right-enter-from,
+.fade-right-leave-to {
+    transform: translate3d(15%, 0, 0);
+    opacity: 0;
+}
+.fade-right-leave-from,
+.fade-right-enter-to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+.fade-right-enter-active,
+.fade-right-leave-active {
+    transition: all 1s;
+}
+
+/* bottom */
+.fade-bottom-enter-from,
+.fade-bottom-leave-to {
+    transform: translate3d(0, 15%, 0);
+    opacity: 0;
+}
+.fade-bottom-leave-from,
+.fade-bottom-enter-to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+.fade-bottom-enter-active,
+.fade-bottom-leave-active {
+    transition: all 1s;
+}
+
+/* left */
+.fade-left-enter-from,
+.fade-left-leave-to {
+    transform: translate3d(-15%, 0, 0);
+    opacity: 0;
+}
+.fade-left-leave-from,
+.fade-left-enter-to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+.fade-left-enter-active,
+.fade-left-leave-active {
+    transition: all 1s;
+}
+
+/*表单排版共用样式*/
+.tother {
+    align-items: center;
+    margin-bottom: 20px;
+    .left {
+        font-size: 14px;
+        width: 74px;
+        margin-right: 22px;
+        text-align: right;
+    }
+    .important {
+        position: relative;
+        &::after {
+            content: '*';
+            color: rgba($important, 1);
+            position: absolute;
+            font-size: 24px;
+            right: -12px;
+            top: -10px;
+        }
+    }
+    input,
+    textarea {
+        width: 400px;
+        padding: 14px;
+        font-size: 14px;
+        border: 1px solid rgba($ccc, 1);
+        margin-right: 10px;
+        &:focus {
+            border: 1px solid rgba($success, 1);
+            -moz-border-image: -moz-linear-gradient(
+                right,
+                rgba($changeYellow, 1) 0%,
+                rgba($changeGreen, 1) 100%
+            );
+            -webkit-border-image: -webkit -linear-gradient(right, rgba(
+                            $changeYellow,
+                            1
+                        )
+                        0%, rgba($changeGreen, 1) 100%);
+            border-image: linear-gradient(
+                to right,
+                rgba($changeYellow, 1) 0%,
+                rgba($changeGreen, 1) 100%
+            );
+            border-image-slice: 1;
+        }
+    }
+
+    .yes {
+        color: rgba($success, 1);
+    }
+    .no {
+        margin-left: 14px;
+        color: rgba($important, 1);
+    }
+}
+
+.cur {
+    cursor: pointer;
+    &:hover {
+        opacity: 0.7;
+        transition: 0.3s;
+    }
+}
+
+.nodata {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 550px;
+        height: auto;
+    }
+}
+
+.disable-opacity {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/*
+  antd css
+*/
+.ant-spin-nested-loading > div > .ant-spin {
+    max-height: 100%;
+}
+
+@media screen and (max-width: 1366px) {
+    .main {
+        width: 90%;
+    }
+}

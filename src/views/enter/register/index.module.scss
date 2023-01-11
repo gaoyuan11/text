@@ -1,0 +1,99 @@
+@import '@/style/var.scss';
+.accountLogin {
+  padding: 80px;
+  margin-bottom: 10vh;
+  img {
+    height: 36px;
+    width: auto;
+    margin-right: 30px;
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 60px;
+  }
+  .chang-nav {
+    display: flex;
+    margin-bottom: 34px;
+    p {
+      font-size: 20px;
+      font-weight: 600;
+      color: rgba($sss, 1);
+      padding: 12px 24px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    .acitve {
+      border-bottom: 3px solid rgba($primay, 1);
+    }
+  }
+  .inp {
+    margin-bottom: 30px;
+  }
+  .inp2 {
+    margin-bottom: 50px;
+  }
+  .yzminput {
+    display: flex;
+    p {
+      margin-bottom: 0;
+    }
+    .yzm {
+      width: calc(76% - 12px);
+      margin-right: 12px;
+    }
+    em {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 24%;
+      font-size: 17px;
+      border: 1px solid rgba($primay, 1);
+      background-color: rgba($fff, 1);
+      color: rgba($primay, 1);
+      font-weight: 600;
+      &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+    }
+  }
+  .enter {
+    button {
+      font-size: 18px;
+      font-weight: 600;
+      width: 100%;
+      padding: 20px 0;
+      color: rgba($fff, 1);
+      background-color: rgba($primay, 1);
+      border-radius: 8px;
+      height: auto !important;
+      &:hover {
+        color: rgba($fff, 1);
+      }
+    }
+  }
+  .note {
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    justify-content: space-between;
+    p {
+      a {
+        color: rgba($primay, 1);
+      }
+    }
+  }
+
+  :global {
+    .ant-input-affix-wrapper-lg {
+      padding: 16px 20px;
+      input {
+        text-indent: 10px;
+      }
+    }
+  }
+}

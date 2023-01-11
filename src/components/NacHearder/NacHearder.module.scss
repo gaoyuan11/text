@@ -1,0 +1,94 @@
+@import '@/style/var.scss';
+.nav-container {
+  background: $fff;
+  display: flex;
+  margin: auto;
+  padding: 14px 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  justify-content: space-between;
+  .tops-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    div {
+      padding: 0 5px;
+    }
+  }
+  .nav {
+    margin-left: 20px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    :global {
+      .active {
+        font-size: 17px;
+        color: rgba($primay, 1);
+        p {
+          color: rgba($primay, 1);
+        }
+      }
+    }
+    a {
+      margin-top: 5px;
+      font-size: 16px;
+      padding: 0 30px;
+      color: rgba($jjj, 1);
+      text-align: center;
+      font-weight: 600;
+      position: relative;
+      .dec {
+        display: block;
+        position: absolute;
+        font-size: 14px;
+        bottom: -60px;
+        color: rgba($sss, 1);
+        font-weight: 500;
+        left: 0;
+        padding: 12px 10px;
+        border-radius: 2px;
+        letter-spacing: 1.2px;
+        opacity: 0;
+        background-color: rgba($fff, 1);
+      }
+      p {
+        font-size: 12px;
+        font-weight: 400;
+        color: rgba($ccc, 1);
+        margin-top: -1px;
+      }
+      &:hover {
+        color: rgba($primay, 1);
+        font-weight: 600;
+        font-size: 18px;
+        transition: 0.3s;
+        .dec {
+          transition: 0.3s;
+          opacity: 1;
+        }
+      }
+    }
+    .actives {
+      height: 50px;
+      margin-top: -5px;
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .nav-container {
+    .nav-box {
+      .nav {
+        a {
+          font-size: 16px;
+          padding: 0 16px;
+        }
+      }
+    }
+  }
+}

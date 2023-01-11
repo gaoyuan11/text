@@ -1,0 +1,25 @@
+//上下居中
+@mixin self-center($pos: absolute) {
+  position: $pos;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + 0.5px), calc(-50% + 0.5px)); //对不齐的办法
+}
+
+//撑满容器
+@mixin self-fill($pos2: fixed) {
+  position: $pos2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+
+//弹性盒居中
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

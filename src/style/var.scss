@@ -1,0 +1,30 @@
+//--------------------可换肤默认的颜色 要使用RGBA的方法-----------------------
+//RPS三色
+$warm:var(--warm,rgb(220, 106, 18));
+$success:var(--success,rgb(126, 191, 80));
+$primay:var(--primay,rgb(107, 158, 238));
+
+//警告 重点
+$important:var(--important, #f57a79);
+
+//除个人中心外使用的颜色--不改变黑白灰
+$zzz: #000000; //特别需要强调的重点色 一般不用
+$ttt: #333333; //大部分标题颜色
+$sss: #666666; //大部分正文颜色
+$jjj: #999999; //大部分时间戳颜色和小副标题
+$ccc: #cccccc; //大部分时间戳颜色和小副标题
+$eee: #eeeeee; //大部分边框颜色
+$fff: #ffffff; //白底
+
+//个人中心的渐变色
+$changeGreen: var(--changeGreen, #40f66e); //渐变绿
+$changeYellow: var(--changeYellow, #fac73e); //渐变黄
+
+//个人中心的字体按钮色
+$green: var(--green, #19b71d); //图标and文字绿色
+$yellow: var(--yellow, #faac3e); //图标and文字黄色以及标签
+$blue: var(--blue, #409eff); //查询的蓝色、
+
+$purple: var(--purple, rgb(188, 87, 252)); //基本只用一次的紫色
+//个人中心背景条淡绿色
+// $lightGreen: #e8f8e8; //用于表格表头和左侧列表 算了还是直接透明度把
